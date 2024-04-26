@@ -1,12 +1,9 @@
 #! /usr/bin/env node
-
 import inquirer from "inquirer";
-
 
 console.log("\n\tWellcome TO \'Simple_Calculator\'\n");
 
 // Asking Questions from Users through inquirer
-
 let calculator = await inquirer.prompt([
     
     {message: "Please Enter your First Number:", type: "number", name: "firstNumber"},
@@ -18,11 +15,9 @@ let calculator = await inquirer.prompt([
         type: "list",
         choices: ["Divison", "Multiplication", "Addition", "Subtraction"],
     },
-
 ]);
 
 // Condational statements
-
 if (calculator.operator === "Divison"){
     console.log(calculator.firstNumber / calculator.secondNumber)
 }
